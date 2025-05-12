@@ -13,47 +13,51 @@
       align-items: center;
       height: 100vh;
       margin: 0;
+      padding: 20px;
     }
 
     .container {
       background: white;
-      padding: 30px;
+      padding: 25px;
       border-radius: 20px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
       max-width: 400px;
-      width: 90%;
       text-align: center;
     }
 
     h1 {
-      font-size: 24px;
+      font-size: 22px;
       margin-bottom: 20px;
       color: #4b2e83;
     }
 
     input[type="password"] {
-      padding: 10px;
-      width: 80%;
+      padding: 12px;
+      width: 100%;
       border: 2px solid #a6c1ee;
       border-radius: 10px;
       font-size: 16px;
       margin-bottom: 15px;
+      box-sizing: border-box;
     }
 
     button {
       background-color: #a6c1ee;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 24px;
       border: none;
       border-radius: 10px;
       font-size: 16px;
       cursor: pointer;
+      width: 100%;
     }
 
     .hint {
       font-size: 14px;
       color: #666;
-      margin-top: 10px;
+      margin-top: 12px;
+      word-wrap: break-word;
     }
   </style>
 </head>
@@ -63,21 +67,5 @@
     <input type="password" id="passwordInput" placeholder="Your secret password...">
     <br>
     <button onclick="checkPassword()">Unlock</button>
-    <div class="hint">Hint: It's a delicate flying beauty.</div>
+    <div class="hint">Hint: It's a delicate flying beauty 🦋</div>
   </div>
-
-  <script>
-    function checkPassword() {
-      const input = document.getElementById('passwordInput').value;
-      const correctPassword = "butterfly";
-
-      if (input.toLowerCase() === correctPassword.toLowerCase()) {
-        localStorage.setItem("unlocked", "true");
-        window.location.href = "message.html";  <!-- Ensure message.html is in the same folder or provide the correct path -->
-      } else {
-        alert("Oops! Wrong password. Try again.");
-      }
-    }
-  </script>
-</body>
-</html>
