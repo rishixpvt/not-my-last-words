@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secret Message 💌</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #4b2e83;
+    }
+
+    .message-box {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="message-box" id="messageBox">
+    <h2>🌸 Secret Message 🌸</h2>
+    <p>
+      My love, I want you to know that the reason I stopped messaging you isn't because my feelings have changed. It's because of the mistake I made by sending that message on WhatsApp, which was unfortunately seen by your mother. I know how difficult things have become for you since then, and the last thing I ever want is to be a burden or make your life harder. That’s why I chose to step back. On the outside, I might seem okay, but the truth is, every time I close my eyes, memories of you flood in and I can't stop the tears, no matter how hard I try. It hurts deeply, because it’s not over for me—not even close. Another reason I’ve held back is because I made a promise not to contact you anymore, a promise I’ve tried to keep, and I know that even sending this message breaks it. But I hope you understand—I just needed you to know. Please, don’t tell anyone about this message. I’ll continue to wait for you, no matter how long it takes. I know I couldn’t be your first love, but I still hope to be your last, your forever. If ever you feel like talking, if you need me—I’ll be here, always ready to reply. I love you, beyond words, until the very last breath I take, even if the world itself fades away.
+      <hr>
+      💕 Keep smiling, the world is better with you in it 💕
+    </p>
+  </div>
+
+  <script>
+    const access = localStorage.getItem("unlocked");
+    if (access !== "true") {
+      alert("Access denied! Redirecting...");
+      window.location.href = "index.html";  <!-- Ensure the path is correct -->
+    }
+  </script>
+</body>
+</html>
