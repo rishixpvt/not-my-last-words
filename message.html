@@ -1,72 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Secret Message 💌</title>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
-      height: 100%;
-    }
-
     body {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px 20px;
-      box-sizing: border-box;
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);
+      color: #333;
     }
 
     .message-box {
-      background: rgba(255, 255, 255, 0.95);
-      padding: 30px 20px;
-      border-radius: 20px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
-      max-width: 500px;
-      width: 100%;
-      text-align: center;
-      animation: fadeIn 1s ease-out;
+      background-color: #ffffffee;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      max-width: 100%;
     }
 
     h2 {
-      font-size: 24px;
-      color: #4b2e83;
+      font-size: 22px;
+      margin-top: 0;
       margin-bottom: 16px;
+      color: #4b2e83;
+      text-align: center;
     }
 
     p {
       font-size: 16px;
-      line-height: 1.6;
-      color: #333;
-      word-wrap: break-word;
+      line-height: 1.5;
+      text-align: center;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 400px) {
-      h2 {
-        font-size: 20px;
-      }
-
-      p {
-        font-size: 15px;
-      }
-
-      body {
-        padding-top: 60px;
+    @media (min-width: 600px) {
+      .message-box {
+        margin: 60px auto;
+        max-width: 500px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="message-box" id="messageBox">
+  <div class="message-box">
     <h2>🌸 Secret Message 🌸</h2>
     <p>
       You are truly special and loved more than you know. 💕<br><br>
@@ -76,6 +54,7 @@
   </div>
 
   <script>
+    // Simple password gate using localStorage
     const access = localStorage.getItem("unlocked");
     if (access !== "true") {
       alert("Access denied! Redirecting...");
